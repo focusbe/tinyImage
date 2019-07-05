@@ -1,0 +1,72 @@
+{
+    "name": "tinyimage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder --x64 --publish never"
+    },
+    "build": {
+        "appId": "com.focusbe.tinyimage",
+        "asar": true,
+        "publish": [
+            {
+                "provider": "generic",
+                "url": "http://nore.focusbe.com/full/${os}/${arch}/"
+            }
+        ],
+        "asarUnpack": [],
+        "mac": {
+            "category": "your.app.category.type",
+            "icon": "assets/icon",
+            "target": [
+                "zip",
+                "dmg"
+            ]
+        },
+        "win": {
+            "target": "nsis",
+            "icon": "assets/icon"
+        },
+        "nsis": {
+            "oneClick": true,
+            "allowToChangeInstallationDirectory": false
+        },
+        "files": {
+            "filter": [
+                "**/*",
+                "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}",
+                "!**/node_modules/.bin",
+                "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+                "!**/._*",
+                "!.editorconfig",
+                "!package.json",
+                "!README.md",
+                "!yarn.lock",
+                "!package-lock.json"
+            ]
+        },
+        "directories": {
+            "output": "output"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/focusbe/tinyImage.git"
+    },
+    "author": "刘鹏",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/focusbe/tinyImage/issues"
+    },
+    "homepage": "https://github.com/focusbe/tinyImage#readme",
+    "devDependencies": {
+        "electron": "^5.0.6",
+        "electron-builder": "^20.44.4"
+    },
+    "dependencies": {
+        "fs-extra": "^8.1.0",
+        "tinypngjs": "^1.0.5"
+    }
+}
