@@ -192,7 +192,6 @@
                             $(".nums .success").html(chuli+'/'+imglist.length);
                             if(!res){
                                 faild++;
-                                
                                 $(".nums .fail").html(faild);
                             }
                             else{
@@ -202,12 +201,18 @@
                                     after+=res.output.size
                                 }
                             }
+                            
                             $(".progress_inner span").width(percent*100+'%');
                             if(percent>=1){
-                                console.log(before);
-                                console.log(after);
-                                var bili = -parseInt((before-after)/before*100)+'%';
-                                alert('压缩完成,压缩比例：'+bili);
+                                var sheng = parseInt((before-after)/1024);
+                                if(sheng>1024){
+                                    sheng = parseInt(sheng/1024*10)/10+'M'
+                                }
+                                else{
+                                    sheng+='K'
+                                }
+                                
+                                alert('压缩完成,节省空间：'+sheng);
                                 $(".progress").hide();
                                 busy = false;
                             }

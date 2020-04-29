@@ -67,6 +67,6 @@
     },
     "dependencies": {
         "fs-extra": "^8.1.0",
-        "tinypngjs": "^1.0.5"
+        "tinypngjs": "^1.2.0"
     }
 }
