@@ -5,6 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="./jquery-1.9.1.min.js"></script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?6ba57de1ca08bcf0bd33c39f591b6c63";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
         <title>tinyImage</title>
         <style>
             html,
@@ -218,7 +227,6 @@
                             }
                         });
                         } catch (error) {
-                            console.log(error);
                             busy = false;
                             $(".progress").hide();
                             if(!!error.message){
