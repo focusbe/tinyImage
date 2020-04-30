@@ -19,7 +19,7 @@
 		"asarUnpack": [],
 		"mac": {
 			"category": "your.app.category.type",
-			"icon": "assets/icon",
+			"icon": "assets/tinypng",
 			"target": [
 				"zip",
 				"dmg"
@@ -27,7 +27,7 @@
 		},
 		"win": {
 			"target": "nsis",
-			"icon": "assets/icon"
+			"icon": "assets/tinypng"
 		},
 		"nsis": {
 			"oneClick": true,
