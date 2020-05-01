@@ -161,6 +161,7 @@
                             .getAllImg(curpath)
                             .then(imgs => {
                                 imagesArr = imagesArr.concat(imgs);
+                                console.log(imgs);
                                 chuli++;
                                 if (chuli >= dropFiles.length) {
                                     startCom(imagesArr);
@@ -202,6 +203,7 @@
                             if(!res){
                                 faild++;
                                 $(".nums .fail").html(faild);
+                                console.log(err);
                             }
                             else{
                                 console.log(res);
