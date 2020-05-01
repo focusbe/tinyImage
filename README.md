@@ -7,4 +7,4 @@
 ## 下载
 ### [Mac](https://github.com/focusbe/tinyImage/releases/download/v1.2.3/tinyimage-1.2.3.dmg)
 ### [Windows](https://github.com/focusbe/tinyImage/releases/download/v1.2.3/tinyimage-Setup-1.2.3.exe)
-### [nodejs版](https://github.com/focusbe/tinypngjs)  
+### [for Nodejs](https://github.com/focusbe/tinypngjs)  
