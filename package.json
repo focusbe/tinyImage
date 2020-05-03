@@ -17,7 +17,9 @@
 				"provider": "github"
 			}
 		],
-		"asarUnpack": [],
+		"asarUnpack": [
+			"node_modules/mozjpeg/","node_modules/tinypngjs/","node_modules/execa/"
+		],
 		"mac": {
 			"category": "your.app.category.type",
 			"icon": "assets/tinypng",
