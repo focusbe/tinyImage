@@ -1,77 +1,81 @@
 {
-	"name": "tinyimage",
-	"version": "1.2.3",
-	"description": "一款压缩效率极高的图片压缩工具",
-	"main": "main.js",
-	"scripts": {
-		"start": "electron .",
-		"mac": "export CSC_IDENTITY_AUTO_DISCOVERY=false",
-		"build": "electron-builder --x64 --publish never",
-		"release": "electron-builder --x64 --publish always"
-	},
-	"build": {
-		"appId": "com.focusbe.tinyimage",
-		"asar": true,
-		"publish": [
-			{
-				"provider": "github"
-			}
-		],
-		"asarUnpack": [
-			"node_modules/mozjpeg/","node_modules/tinypngjs/","node_modules/execa/"
-		],
-		"mac": {
-			"category": "your.app.category.type",
-			"icon": "assets/tinypng",
-			"target": [
-				"zip",
-				"dmg"
-			]
-		},
-		"win": {
-			"target": "nsis",
-			"icon": "assets/tinypng"
-		},
-		"nsis": {
-			"oneClick": true,
-			"allowToChangeInstallationDirectory": false
-		},
-		"files": {
-			"filter": [
-				"**/*",
-				"!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}",
-				"!**/node_modules/.bin",
-				"!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
-				"!**/._*",
-				"!.editorconfig",
-				"!package.json",
-				"!README.md",
-				"!yarn.lock",
-				"!package-lock.json"
-			]
-		},
-		"directories": {
-			"output": "output"
-		}
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/focusbe/tinyImage.git"
-	},
-	"author": "刘鹏",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/focusbe/tinyImage/issues"
-	},
-	"homepage": "https://github.com/focusbe/tinyImage#readme",
-	"devDependencies": {
-		"cross-env": "^7.0.2",
-		"electron": "^8.2.4",
-		"electron-builder": "^22.6.0"
-	},
-	"dependencies": {
-		"electron-updater": "^4.3.1",
-		"fs-extra": "^8.1.0",
-		"tinypngjs": "^1.2.4"
-	}
+  "name": "tinyimage",
+  "version": "1.2.3",
+  "description": "一款压缩效率极高的图片压缩工具",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "mac": "export CSC_IDENTITY_AUTO_DISCOVERY=false",
+    "build": "electron-builder --x64 --publish never",
+    "release": "electron-builder --x64 --publish always"
+  },
+  "build": {
+    "appId": "com.focusbe.tinyimage",
+    "asar": true,
+    "publish": [
+      {
+        "provider": "github"
+      }
+    ],
+    "asarUnpack": [
+      "node_modules/mozjpeg/",
+      "node_modules/tinypngjs/",
+      "node_modules/execa/",
+      "node_modules/imagemin/",
+      "renderer"
+    ],
+    "mac": {
+      "category": "your.app.category.type",
+      "icon": "assets/tinypng",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/tinypng"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false
+    },
+    "files": {
+      "filter": [
+        "**/*",
+        "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}",
+        "!**/node_modules/.bin",
+        "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+        "!**/._*",
+        "!.editorconfig",
+        "!package.json",
+        "!README.md",
+        "!yarn.lock",
+        "!package-lock.json"
+      ]
+    },
+    "directories": {
+      "output": "output"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/focusbe/tinyImage.git"
+  },
+  "author": "刘鹏",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/focusbe/tinyImage/issues"
+  },
+  "homepage": "https://github.com/focusbe/tinyImage#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "electron": "^8.2.4",
+    "electron-builder": "^22.6.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.1",
+    "fs-extra": "^8.1.0",
+    "tinypngjs": "^1.2.4"
+  }
 }
