@@ -4,9 +4,7 @@
 1. 无张数限制
 2. 无需appid  
 
-[下载地址](https://github.com/focusbe/tinyImage/releases)
-
-### Github
-
-nodejs版：[https://github.com/focusbe/tinypngjs](https://github.com/focusbe/tinypngjs)  
-客户端版：[https://github.com/focusbe/tinyImage](https://github.com/focusbe/tinyImage)
+## 下载
+### [Mac](https://github.com/focusbe/tinyImage/releases/download/v1.2.3/tinyimage-1.2.3.dmg)
+### [Windows](https://github.com/focusbe/tinyImage/releases/download/v1.2.3/tinyimage-Setup-1.2.3.exe)
+### [Nodejs](https://github.com/focusbe/tinypngjs)  
