@@ -1,6 +1,6 @@
 {
   "name": "tinyimage",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "一款压缩效率极高的图片压缩工具",
   "main": "main.js",
   "scripts": {
@@ -74,6 +74,7 @@
     "electron-builder": "^22.6.0"
   },
   "dependencies": {
+    "electron-baidu-tongji": "^1.0.5",
     "electron-updater": "^4.3.1",
     "fs-extra": "^8.1.0",
     "tinypngjs": "^1.2.4"
