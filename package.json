@@ -70,7 +70,7 @@
   "homepage": "https://github.com/focusbe/tinyImage#readme",
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "electron": "^8.2.4",
+    "electron": "^9.4.0",
     "electron-builder": "^22.6.0"
   },
   "dependencies": {
