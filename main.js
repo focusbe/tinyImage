@@ -1,4 +1,6 @@
 const { app, BrowserWindow } = require("electron");
+
+
 const Update = require("./main/update");
 global.Win = null;
 function createWindow() {

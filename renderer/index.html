@@ -73,8 +73,10 @@
             
         </div>
         <script>
-          
-            var tinypngjs = require("tinypngjs");
+            var remote = require("electron").remote;
+            const task = remote.require('./main/task.js');
+            // task.compress();
+            // var tinypngjs = require("tinypngjs");
             var path = require("path");
             var fse = require("fs-extra");
             var exts = [".jpg", ".png"];
@@ -151,19 +153,19 @@
                             startCom(imagesArr);
                         }
                     } else {
-                        tinypngjs
-                            .getAllImg(curpath)
-                            .then(imgs => {
-                                imagesArr = imagesArr.concat(imgs);
-                                // console.log(imgs);
-                                chuli++;
-                                if (chuli >= dropFiles.length) {
-                                    startCom(imagesArr);
-                                }
-                            })
-                            .catch(err => {
-                              // console.log(err);
-                            });
+                        // tinypngjs
+                        //     .getAllImg(curpath)
+                        //     .then(imgs => {
+                        //         imagesArr = imagesArr.concat(imgs);
+                        //         // console.log(imgs);
+                        //         chuli++;
+                        //         if (chuli >= dropFiles.length) {
+                        //             startCom(imagesArr);
+                        //         }
+                        //     })
+                        //     .catch(err => {
+                        //       // console.log(err);
+                        //     });
                     }
                 }
             });
@@ -191,8 +193,11 @@
                         $(".progress .num").html("0/" + imglist.length);
                         $(".progress span").width(0);
                         $(".progress").css({display:'flex'});
+                        // task.compress(imglist,function(res,percent,err){
+                        //     console.log(percent);
+                        // });
                         try {
-                            tinypngjs.compressList(imglist,function(res,percent,err){
+                             task.compress(imglist,function(res,percent,err){
                             chuli++;
                             console.log(percent);
                             $(".nums .success").html(chuli+'/'+imglist.length);

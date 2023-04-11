@@ -1,0 +1,26 @@
+{
+  "name": "tinypngjs",
+  "version": "1.2.4",
+  "description": "nodejs 调用tinypng 接口压缩图片",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/focusbe/tinypngjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/focusbe/tinypngjs/issues"
+  },
+  "homepage": "https://github.com/focusbe/tinypngjs#readme",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "iconv-lite": "^0.5.1",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0"
+  }
+}
