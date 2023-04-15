@@ -33,14 +33,12 @@ class TinyPng {
             let curpath = imagelist[i].path;
             TinyPng.compressImg(curpath, curpath)
                 .then((res) => {
-                    console.log(res);
                     compressed++;
                     if (!!onprogress) {
                         onprogress(res, compressed / total);
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                     compressed++;
                     onprogress(false, compressed / total, err);
                 });
