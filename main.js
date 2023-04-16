@@ -1,11 +1,6 @@
-const { app, BrowserWindow, contextBridge } = require('electron');
-const TinyPng = require('tinypngjs');
+const { app, BrowserWindow } = require('electron');
 const Update = require('./main/update');
 const path = require('path');
-function myFunction() {
-    console.log('Hello from main process!');
-}
-
 global.Win = null;
 function createWindow() {
     // 创建浏览器窗口
@@ -23,7 +18,6 @@ function createWindow() {
     win.once('ready-to-show', function () {
         win.show();
         Update.check();
-        win.webContents.openDevTools();
     });
     // 加载index.html文件
     win.loadFile('renderer/index.html');

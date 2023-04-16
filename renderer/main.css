@@ -1,0 +1,56 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+
+    color: #fff;
+    font-size: 14px;
+}
+
+html,
+body {
+    height: 100%;
+    background: #24292e;
+}
+
+.drop {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: #24292e;
+    display: none;
+    flex-direction: column;
+}
+
+.progress_inner {
+    width: 80%;
+    background: #ccc;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress_inner span {
+    height: 100%;
+    display: inline-block;
+    width: 0%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #00ee76;
+    transition: all 0.3s;
+}
