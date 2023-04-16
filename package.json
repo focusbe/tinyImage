@@ -11,7 +11,7 @@
   },
   "build": {
     "appId": "com.focusbe.tinyimage",
-    "asar": true,
+    "asar": false,
     "publish": [
       {
         "provider": "github"
