@@ -78,6 +78,6 @@
     "electron-updater": "^5.3.0",
     "fs-extra": "^8.1.0",
     "imagemin": "^8.0.1",
-    "tinypngjs": "^1.2.7"
+    "tinypngjs": "^1.2.10"
   }
 }
