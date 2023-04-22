@@ -71,7 +71,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "electron": "^24.1.2",
-    "electron-builder": "^23.6.0"
+    "electron-builder": "^24.2.1"
   },
   "dependencies": {
     "@electron/remote": "^2.0.9",
