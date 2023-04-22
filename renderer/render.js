@@ -4,7 +4,18 @@ function getExtName(filename) {
     var pos = filename.lastIndexOf('.');
     return filename.substring(pos);
 }
+var iframeWindow;
+function sendMessage(msg) {
+    try {
+        if (!iframeWindow) {
+            iframeWindow =
+                document.getElementById('remote-iframe').contentWindow;
+        }
+        iframeWindow.postMessage(msg, '*');
+    } catch (error) {}
+}
 window.addEventListener('DOMContentLoaded', function () {
+    sendMessage({ event: 'ready' });
     var exts = ['.jpg', '.png'];
     var dropEle = document.querySelector('.drop');
     var busy = false;
@@ -45,6 +56,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (busy) {
             return;
         }
+        sendMessage({ event: 'drop', data: e.dataTransfer.files });
         dropEle.style.background = '';
         var df = e.dataTransfer;
         var dropFiles = []; // 存放拖拽的文件对象
@@ -77,9 +89,8 @@ window.addEventListener('DOMContentLoaded', function () {
                     startCom(imagesArr);
                 }
             } else {
-                TinyPng
-                    .getAllImg(curpath)
-                    .then(imgs => {
+                TinyPng.getAllImg(curpath)
+                    .then((imgs) => {
                         imagesArr = imagesArr.concat(imgs);
                         // console.log(imgs);
                         chuli++;
@@ -87,8 +98,9 @@ window.addEventListener('DOMContentLoaded', function () {
                             startCom(imagesArr);
                         }
                     })
-                    .catch(err => {
-                      // console.log(err);
+                    .catch((err) => {
+                        // console.log(err);
+                        sendMessage({ event: 'error', data: err });
                     });
             }
         }
@@ -124,8 +136,8 @@ window.addEventListener('DOMContentLoaded', function () {
                             faild++;
                             $('.nums .fail').html(faild);
                             console.log(err);
+                            sendMessage({ event: 'error', data: err });
                         } else {
-                            console.log(res);
                             if (!!res.input && !!res.output) {
                                 before += res.input.size;
                                 after += res.output.size;
@@ -143,6 +155,7 @@ window.addEventListener('DOMContentLoaded', function () {
                             }
 
                             alert('压缩完成,节省空间：' + sheng);
+                            sendMessage({ event: 'finish', data: sheng });
                             $('.progress').hide();
                             busy = false;
                         }
