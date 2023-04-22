@@ -4,8 +4,7 @@ function getExtName(filename) {
     var pos = filename.lastIndexOf('.');
     return filename.substring(pos);
 }
-
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
     var exts = ['.jpg', '.png'];
     var dropEle = document.querySelector('.drop');
     var busy = false;

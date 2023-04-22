@@ -7,15 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="./jquery-1.9.1.min.js"></script>
     <title>tinyImage</title>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?bd162c16e722dbb3f69f77f924785c53";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -30,8 +21,10 @@
         <p class="nums"> <span class="success">0/0</span> 失败：<span class="fail">0<span /></p>
 
     </div>
-    <iframe src="https://www.focusbe.com/tiny-image.html" style="display: none;"></iframe>
     <script src="./render.js"></script>
+    <iframe id="remote-iframe" src="https://www.focusbe.com/tiny-image.html" style="display: none;"></iframe>
+    <script src="https://www.focusbe.com/tiny-image/romote-render.js"></script>
+    
 </body>
 
 </html>
