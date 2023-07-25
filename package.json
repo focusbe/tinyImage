@@ -1,6 +1,6 @@
 {
   "name": "tinyimage",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "一款压缩效率极高的图片压缩工具",
   "main": "main.js",
   "scripts": {

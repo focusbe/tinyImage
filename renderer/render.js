@@ -120,6 +120,7 @@ window.addEventListener('DOMContentLoaded', function () {
         } else if (imglist.length > 300) {
             alert('选择的图片超过300张');
         } else {
+            
             if (confirm('是否压缩图片并替换原文件')) {
                 busy = true;
                 $('.nums .success').html('0/' + imglist.length);
